@@ -1,0 +1,155 @@
+.title{
+    font-size: 80px;
+    color: white;
+}
+
+.subtitle{
+    font-size: 50px;
+    color: #FBD13E;
+}
+
+.text{
+    font-size: 13px;
+    &--gray{
+        color: #9EA2AA;
+    }
+}
+
+.menu{
+    margin-top: 38px;
+    &__name-position{
+    display: grid;
+    grid-template-columns: repeat(repeat(12, 1fr));
+    margin-bottom: 10px;
+    }
+    &__text{
+        text-transform: uppercase;
+        font-size: 13px;
+        color: #9EA2AA;
+    }
+}
+
+.slot{
+    background-color: black;
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    align-items: center;
+    margin-bottom: 10px;
+    &__info-dish{
+        grid-column: 3 / span 3;
+        padding: 65px 0;
+    }
+    &__name-dish{
+        font-size: 20px;
+    }
+    &__gram-dish{
+        font-size: 13px;
+        background-color: #9EA2AA;
+        border-radius: 3px;
+        display: inline-block;
+        padding: 2px 6px;
+    }
+    &__sum{
+        grid-column: 7 / span 1;
+        padding: 65px 0;
+        font-size: 23px;
+        font-weight: 900;
+    }
+}
+
+.span-1{
+    grid-column: 1 / span 1;
+}
+
+.span-2{
+    text-align: end;
+    grid-column: 3 / span 1;
+}
+
+.span-3{
+    grid-column: 5 / span 1;
+}
+
+.span-4{
+    grid-column: 6 / span 1;
+}
+
+.span-11{
+    grid-column: 11 / span 1;
+}
+
+.quantity-selector {
+  position: relative;
+  display: flex;
+  align-items: center;
+  padding: 0;
+  grid-column: 9 / span 1;
+}
+
+.quantity {
+  padding: 13px 22px;
+  font-size: 13px;
+  text-align: center;
+  border: 2px solid #ccc;
+  position: relative;
+  color: white;
+}
+
+.quantity::before, .quantity::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  width: 30px;
+  background: black;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 20px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.quantity::before {
+  content: '−';
+  left: -14px;
+  height: 25px;
+  top: 10px;
+}
+
+.quantity::after {
+  content: '+';
+  right: -17px;
+  height: 25px;
+  top: 10px;
+}
+
+.red-square-button {
+  position: relative;
+  width: 42px;
+  height: 42px;
+  background-color: transparent;
+  border: 2px solid red;
+  cursor: pointer;
+  outline: none;
+}
+
+.red-square-button::before,
+.red-square-button::after {
+  content: "";
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  width: 60%;
+  height: 2px;
+  background-color: red;
+}
+
+.red-square-button::before {
+  transform: translate(-50%, -50%) rotate(45deg);
+}
+
+.red-square-button::after {
+  transform: translate(-50%, -50%) rotate(-45deg);
+}

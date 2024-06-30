@@ -1,1 +1,29 @@
-/* You can add global styles to this file, and also import other style files */
+html, body {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+}
+
+body{
+    background-color: #0F0F11;
+    background-image: url(../src/assets/bg.png);
+    background-repeat: no-repeat;
+}
+
+ul, ol {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+  color: white;
+  cursor: pointer;
+}
+
+p{
+  margin: 0;
+  padding: 0;
+  color: white;
+}
+
+a{
+  color: inherit;
+}
