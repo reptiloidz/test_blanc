@@ -1,4 +1,6 @@
-import { Component } from '@angular/core';
+import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
+import { Product } from '../ models/product.model';
+import { CartService } from '../services/cart.service';
 
 @Component({
   selector: 'app-basket',
@@ -7,6 +9,5 @@ import { Component } from '@angular/core';
   templateUrl: './basket.component.html',
   styleUrl: './basket.component.scss'
 })
-export class BasketComponent {
-
+export class BasketComponent{
 }

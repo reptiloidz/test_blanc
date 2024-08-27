@@ -1,0 +1,29 @@
+<nav class="menu">
+  <div class="menu__header">
+    <button class="menu__toggle" (click)="toggleMenu()">
+		<svg
+			xmlns="http://www.w3.org/2000/svg"
+			fill="currentColor"
+			class="menu__icon"
+			viewBox="0 0 16 16"
+		>
+			<path
+				fill-rule="evenodd"
+				d="M2.5 12a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0
+				0 1-.5-.5m0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5
+				0 0 1-.5-.5m0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0
+				1H3a.5.5 0 0 1-.5-.5"
+			/>
+		</svg>
+	</button>
+	<p class="text text--uppercase">Меню</p>
+  </div>
+  <ul class="menu__list" [ngClass]="{'menu__list--open': isMenuOpen}">
+	<li class="menu__item">Акции🔥</li>
+	<li class="menu__item">Горячее</li>
+	<li class="menu__item">Холодное</li>
+	<li class="menu__item">Свежая выпечка</li>
+	<li class="menu__item">Десерты</li>
+	<li class="menu__item">Напитки</li>
+  </ul>
+</nav>

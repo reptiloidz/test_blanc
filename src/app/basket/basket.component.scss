@@ -13,6 +13,15 @@
     &--gray{
         color: #9EA2AA;
     }
+    &--uppercase{
+        text-transform: uppercase;
+    }
+}
+
+.sum{
+    font-size: 23px;
+    font-weight: 800;
+    color: white;
 }
 
 .menu{
@@ -21,11 +30,6 @@
     display: grid;
     grid-template-columns: repeat(repeat(12, 1fr));
     margin-bottom: 10px;
-    }
-    &__text{
-        text-transform: uppercase;
-        font-size: 13px;
-        color: #9EA2AA;
     }
 }
 
@@ -152,4 +156,50 @@
 
 .red-square-button::after {
   transform: translate(-50%, -50%) rotate(-45deg);
+}
+
+.button {
+    color: #FBD13E;
+    border: 1px solid #FBD13E;
+    padding: 10px 20px;
+    background: none;
+    font-size: 13px;
+    &:hover {
+        color: #DBB325;
+        border: 1px solid #DBB325;
+    }
+    &:active {
+        color: black;
+        background-color: #FBD13E;
+    }
+}
+
+.order-button{
+    color: black;
+    background-color: #FBD13E;
+    padding: 10px 24px;
+    font-size: 12px;
+    font-weight: 700;
+    border: none;
+    &:hover {
+        background-color: #DBB325;
+    }
+    &:active {
+        background-color: black;
+        color: #FBD13E;
+    }
+}
+
+.place-order {
+
+}
+
+.input {
+    gap: 19px;
+}
+
+.order-section {
+    margin-left: auto;
+    margin-bottom: 144px;
+    margin-top: 44px;
 }

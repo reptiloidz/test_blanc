@@ -3,6 +3,7 @@ import { Routes, RouterModule } from '@angular/router';
 import { AppComponent } from './app.component';
 import { BasketComponent } from './basket/basket.component';
 import { HomeComponent } from './home/home.component';
+import { CommonModule } from '@angular/common';
 
 export const routes: Routes = [
     { path: '', component: HomeComponent },
@@ -11,7 +12,7 @@ export const routes: Routes = [
 
 @NgModule({
   imports: [],
-  exports: [RouterModule]
+  exports: [RouterModule, CommonModule]
 })
 
 export class AppRoutingModule { }
