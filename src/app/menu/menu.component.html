@@ -1,12 +1,14 @@
-<nav class="menu">
-  <div class="menu__header">
-    <button class="menu__toggle" (click)="toggleMenu()">
-		<svg
-			xmlns="http://www.w3.org/2000/svg"
-			fill="currentColor"
-			class="menu__icon"
-			viewBox="0 0 16 16"
-		>
+<nav class="menu" [ngClass]="{'is-mobile': isMobile}">
+	<div class="regular-menu" *ngIf="!isMobile">
+		<ul class="menu__nav">
+			<li class="nav-item" *ngFor="let item of menuItems.slice(0, 6)">
+				<a class="menu__link text-uppercase" href="#">{{ item }}</a>
+			</li>
+		</ul>
+	</div>
+
+	<button class="menu__toggler" type="button" (click)="toggleMenu()" *ngIf="isMobile">
+		<svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" class="menu__icon" viewBox="0 0 16 16">
 			<path
 				fill-rule="evenodd"
 				d="M2.5 12a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0
@@ -15,15 +17,95 @@
 				1H3a.5.5 0 0 1-.5-.5"
 			/>
 		</svg>
+		<p class="text text--uppercase">Меню</p>
 	</button>
-	<p class="text text--uppercase">Меню</p>
-  </div>
-  <ul class="menu__list" [ngClass]="{'menu__list--open': isMenuOpen}">
-	<li class="menu__item">Акции🔥</li>
-	<li class="menu__item">Горячее</li>
-	<li class="menu__item">Холодное</li>
-	<li class="menu__item">Свежая выпечка</li>
-	<li class="menu__item">Десерты</li>
-	<li class="menu__item">Напитки</li>
-  </ul>
+
+	<div class="menu__mobile" id="mobileMenu" *ngIf="showMobileMenu" (click)="toggleMenu()">
+		<div class="menu__background">
+			<div class="menu__content">
+				<div class="menu__container">
+					<div class="menu__image">
+						<img src="../../assets/banner.jpg" alt="Image Alt Text" class="menu__image">
+					</div>
+					<div class="menu__image-mobile">
+						<img src="../../assets/banner-mobile.png" alt="Image Alt Text" class="menu__image-mobile">
+					</div>
+					<div class="menu__rows">
+						<div class="row">
+							<div class="col mb-21">
+								<a class="text-uppercase menu__link menu__link--gray" href="#">Горячее:</a>
+							</div>
+							<div class="col" *ngFor="let item of menuItems.slice(1, 2)">
+								<a class="menu__link menu__link--gray" href="#"></a>
+							</div>
+						</div>
+						<div class="row">
+							<div class="menu__hot col mb-15" *ngFor="let item of menuItems.slice(6, 7)">
+								<img class="menu__position-image" src="../../assets/menu-position-one.png" alt="">
+								<a class="menu__text menu__link" href="#">{{ item }}</a>
+							</div>
+							<div class="col mb-15 pl-0" *ngFor="let item of menuItems.slice(3, 4)">
+								<img class="mr-8" src="../../assets/bakery.png" alt="">
+								<a class="menu__text menu__link" href="#">{{ item }}</a>
+							</div>
+						</div>
+						<div class="row">
+							<div class="col mb-15" *ngFor="let item of menuItems.slice(7, 8)">
+								<img class="menu__position-image" src="../../assets/sups.png" alt="">
+								<a class="menu__text menu__link" href="#"> {{ item }} </a>
+							</div>
+							<div class="col" *ngFor="let item of menuItems.slice(5, 6)">
+								<img class="menu__position-image" src="../../assets/desserts.png" alt="">
+								<a class="menu__text menu__link" href="#">{{ item }}</a>
+							</div>
+						</div>
+						<div class="row">
+							<div class="col mb-15" *ngFor="let item of menuItems.slice(8, 9)">
+								<img class="menu__position-image" src="../../assets/khinkali.png" alt="">
+								<a class="menu__text menu__link" href="#">{{ item }}</a>
+							</div>
+							<div class="col mb-15" *ngFor="let item of menuItems.slice(5, 6)">
+								<img class="menu__position-image" src="../../assets/drinks.png" alt="">
+								<a class="menu__text menu__link" href="#">{{ item }}</a>
+							</div>
+						</div>
+
+						<div class="row">
+							<div class="col mb-15" *ngFor="let item of menuItems.slice(7, 8)">
+								<a class="text-uppercase menu__link menu__link--gray" href="#"> Холодное: </a>
+							</div>
+							<div class="col">
+							</div>
+						</div>
+
+						<div class="row">
+							<div class="col mb-15" *ngFor="let item of menuItems.slice(10, 11)">
+								<img class="menu__position-image" src="../../assets/cold-snacks.png" alt="">
+								<a class="menu__text menu__link" href="#">{{ item }}</a>
+							</div>
+							<div class="col">
+							</div>
+						</div>
+
+						<div class="row">
+							<div class="col mb-15" *ngFor="let item of menuItems.slice(11, 12)">
+								<img class="menu__position-image" src="../../assets/salads.png" alt="">
+								<a class="menu__text menu__link" href="#">{{ item }}</a>
+							</div>
+							<div class="col">
+							</div>
+						</div>
+
+						<div class="row">
+							<div class="col" *ngFor="let item of menuItems.slice(12, 13)">
+								<a class="menu__text menu__link" href="#">{{ item }}</a>
+							</div>
+							<div class="col">
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
 </nav>

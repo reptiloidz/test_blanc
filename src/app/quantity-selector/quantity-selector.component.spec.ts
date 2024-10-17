@@ -3,21 +3,21 @@ import { ComponentFixture, TestBed } from '@angular/core/testing';
 import { QuantitySelectorComponent } from './quantity-selector.component';
 
 describe('QuantitySelectorComponent', () => {
-  let component: QuantitySelectorComponent;
-  let fixture: ComponentFixture<QuantitySelectorComponent>;
+	let component: QuantitySelectorComponent;
+	let fixture: ComponentFixture<QuantitySelectorComponent>;
 
-  beforeEach(async () => {
-    await TestBed.configureTestingModule({
-      imports: [QuantitySelectorComponent]
-    })
-    .compileComponents();
+	beforeEach(async () => {
+		await TestBed.configureTestingModule({
+			imports: [QuantitySelectorComponent]
+		})
+		.compileComponents();
 
-    fixture = TestBed.createComponent(QuantitySelectorComponent);
-    component = fixture.componentInstance;
-    fixture.detectChanges();
-  });
+		fixture = TestBed.createComponent(QuantitySelectorComponent);
+		component = fixture.componentInstance;
+		fixture.detectChanges();
+	});
 
-  it('should create', () => {
-    expect(component).toBeTruthy();
-  });
+		it('should create', () => {
+		expect(component).toBeTruthy();
+	});
 });

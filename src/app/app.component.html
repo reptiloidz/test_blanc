@@ -1,15 +1,9 @@
 <div class="content">
-	<div class="nav">
-		<img class="logo" src="../assets/logo.png" alt="#!">
+	<nav #navbar class="nav">
+		<div>
+			<img class="logo" src="../assets/logo.png" alt="#!">
+		</div>
 		<app-menu></app-menu>
-		<!-- <ul class="menu">
-			<li class="menu__item">Акции🔥</li>
-			<li class="menu__item">Горячее</li>
-			<li class="menu__item">Холодное</li>
-			<li class="menu__item">Свежая выпечка</li>
-			<li class="menu__item">Десерты</li>
-			<li class="menu__item">Напитки</li>
-		</ul> -->
 		<div class="nav__profile">
 			<svg
 				xmlns="http://www.w3.org/2000/svg"
@@ -49,11 +43,12 @@
 				/>
 			</svg>
 		</div>
-	</div>
+	</nav>
 	<div class="container">
 		<app-basket></app-basket>
 	</div>
 </div>
+
 <footer class="footer">
 	<div class="container">
 		<div class="footer__content-top">

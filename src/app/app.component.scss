@@ -1,80 +1,94 @@
 :root{
-    --container: 0px 50px;
+	--container: 0px 50px;
+}
+
+body, html {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 100%;
+  overflow-x: hidden;
 }
 
 .content {
-    flex: 1;
+	flex: 1;
 }
 
 .container-md{
-    padding: var(--container);
+	padding: var(--container);
 }
 
 .nav{
-    padding: 52px 50px;
-    position: sticky;
-    top: 0;
-    justify-content: space-between;
+	padding: 52px 50px;
+	position: sticky;
+	top: 0;
+	justify-content: space-between;
+	z-index: 2;
 
-    &__profile {
-        display: flex;
-        gap: 40px;
+	&__profile {
+		display: flex;
+		gap: 40px;
 
-        @media (max-width: 1450px) {
-            margin-left: auto;
-        }
-    }
+		@media (max-width: 1450px) {
+			margin-left: auto;
+		}
+	}
 
-    @media (max-width: 1450px) {
-        justify-content: start;
-    }
+	@media (max-width: 1450px) {
+		justify-content: start;
+	}
 }
 
 .footer{
-    background-color: black;
-    &__links{
-        display: flex;
-        gap: 50px;
-        margin: auto;
-    }
-    &__text{
-        color: white;
-        font-size: 12px;
-        &--lg{
-            font-size: 20px;
-        }
-    }
-    &__content-right{
-        display: flex;
-        gap: 50px;
-        align-items: center;
-    }
-    &__content-top{
-        display: flex;
-        padding: 50px 0px;
-        border-bottom: 1px solid gray;
-        align-items: center;
-    }
-    &__content-bottom{
-        display: flex;
-        justify-content: space-between;
-        padding: 28px 0;
-    }
-    &__logo{
-        width: 135px;
-        height: 24px;
-    }
+	background-color: black;
+	&__links{
+		display: flex;
+		gap: 50px;
+		margin: auto;
+	}
+	&__text{
+		color: white;
+		font-size: 12px;
+		&--lg{
+			font-size: 20px;
+		}
+	}
+	&__content-right{
+		display: flex;
+		gap: 50px;
+		align-items: center;
+	}
+	&__content-top{
+		display: flex;
+		padding: 50px 0px;
+		border-bottom: 1px solid gray;
+		align-items: center;
+	}
+	&__content-bottom{
+		display: flex;
+		justify-content: space-between;
+		padding: 28px 0;
+	}
+	&__logo{
+		width: 135px;
+		height: 24px;
+	}
 }
 
 .icon {
-    width: 29px;
-    fill: white;
-    cursor: pointer;
+	width: 29px;
+	fill: white;
+	cursor: pointer;
 
-    &:hover {
-        fill: #FBD13E;
-    }
-    &--small-w {
-        width: 25px;
-    }
+	&:hover {
+		fill: #FBD13E;
+	}
+	&--small-w {
+		width: 25px;
+	}
+}
+
+nav.scrolled {
+  background-color: black;
+  transition: background-color 0.5s ease;
 }
